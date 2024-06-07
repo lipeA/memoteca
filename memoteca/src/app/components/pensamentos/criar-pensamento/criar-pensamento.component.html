@@ -4,17 +4,17 @@
     <form action="">
 
       <label for="pensamento">Pensamento</label>
-      <input type="textarea" name="pensamento" id="pensamento" class="input" placeholder="Digite seu pensamento" [value]="pensamento.conteudo">
+      <input type="textarea" name="pensamento" id="pensamento" class="input" placeholder="Digite seu pensamento" [(ngModel)]="pensamento.conteudo" >
 
 
       <label for="pensamento">Autoria fonte</label>
-      <input type="textarea" name="autoria" id="autoria" class="input" placeholder="Digite a autoria ou fonte" [value]="pensamento.autoria" >
+      <input type="textarea" name="autoria" id="autoria" class="input" placeholder="Digite a autoria ou fonte" [(ngModel)]="pensamento.autoria"  >
 
       <label for="modelo"> Selecione o modelo do card:</label>
       <div class="container-radio">
         <div class="radio-modelo">
           <label for="modelo1">
-            <input type="radio" id="modelo1" value="modelo1" name="modelo-card">
+            <input type="radio" id="modelo1" value="modelo1" name="modelo-card" [(ngModel)]="pensamento.modelo">
             <div class="custom-radio">
               <span></span>
             </div>
@@ -31,7 +31,7 @@
 
         <div class="radio-modelo">
           <label for="modelo2">
-            <input type="radio" id="modelo2" value="modelo2" name="modelo-card">
+            <input type="radio" id="modelo2" value="modelo2" name="modelo-card" [(ngModel)]="pensamento.modelo">
             <div class="custom-radio">
               <span></span>
             </div>
@@ -48,7 +48,7 @@
 
         <div class="radio-modelo">
           <label for="modelo3">
-            <input type="radio" id="modelo3" value="modelo3" name="modelo-card">
+            <input type="radio" id="modelo3" value="modelo3" name="modelo-card" [(ngModel)]="pensamento.modelo">
             <div class="custom-radio">
               <span></span>
             </div>
@@ -64,7 +64,7 @@
       </div>
         <div class="acoes">
         <button class="botao"  (click)="criarPensamento()"> Salvar</button>
-        <button class="botao"> Cancelar</button>
+        <button class="botao"  routerLink="/listarPensamento"  > Cancelar</button>
         </div>
     </form>
   </header>
